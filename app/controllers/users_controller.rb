@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        authentication_required
         @user = User.find_by_id(params[:id])
     end
 
