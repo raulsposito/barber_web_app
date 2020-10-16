@@ -7,4 +7,20 @@ class BookingsController < ApplicationController
 
     def index
     end
+
+    def create 
+        binding.pry
+        @booking = current_user.bookings.build(bookings_params)
+        if @booking.save 
+            redirect_to posts_path
+        else 
+            render :new 
+        end
+    end
+
+    private 
+
+    def bookings_params
+        params.require(:booking).permit(:date, :user_id, :barber_id)
+    end
 end

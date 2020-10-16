@@ -1,0 +1,19 @@
+<div class="center">
+
+    <%= form_for @barber do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :email %>        
+        <%= f.email_field :email %>
+
+        <%= f.label :image_url %>
+        <%= f.text_field :image_url %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.submit %>
+
+    <% end %>
+</div>

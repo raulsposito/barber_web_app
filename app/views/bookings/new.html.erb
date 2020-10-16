@@ -2,7 +2,8 @@
 
 <%= form_for(@booking) do |f| %>
     <%= f.label :date %>
-    <%= f.text_field :date %>
+    <%= f.date_field :date %>
+## need to add a barber to select from
 
     <%= f.hidden_field :user_id, value: session[:user_id] %>
 

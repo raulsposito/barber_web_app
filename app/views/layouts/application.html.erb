@@ -13,8 +13,10 @@
     <%= link_to "Login", login_path %> | 
     <%= link_to "Signup", signup_path %> |
     <% if logged_in? %>
-      <%= link_to "Make a Booking", new_booking_path %>
-      <%= link_to "View All Bookings", bookings_path %>
+      <%= link_to "Make a Booking", new_booking_path %> |
+      <%= link_to "View All Bookings", bookings_path %> |
+      <%= link_to "Create Barber's Profile", new_barber_path %> |
+      <%= link_to "View All Barbers", barbers_path %>
       <%= link_to "Log Out", logout_path, method: :delete %>
     <% end %>
   </div>
