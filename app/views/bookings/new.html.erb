@@ -3,7 +3,9 @@
 <%= form_for(@booking) do |f| %>
     <%= f.label :date %>
     <%= f.date_field :date %>
-## need to add a barber to select from
+
+    <%= f.label :barber %>
+    <%= f.check_box :barber %>
 
     <%= f.hidden_field :user_id, value: session[:user_id] %>
 

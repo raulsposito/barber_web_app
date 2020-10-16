@@ -9,7 +9,6 @@ class BookingsController < ApplicationController
     end
 
     def create 
-        binding.pry
         @booking = current_user.bookings.build(bookings_params)
         if @booking.save 
             redirect_to posts_path
