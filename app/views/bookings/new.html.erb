@@ -5,7 +5,7 @@
     <%= f.date_field :date %>
 
     <%= f.label :barber %>
-    <%= f.check_box :barber %>
+    <%= f.collection_select :barber_id, Barber.all, :id, :name %>
 
     <%= f.hidden_field :user_id, value: session[:user_id] %>
 
