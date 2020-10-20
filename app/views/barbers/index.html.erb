@@ -1,1 +1,8 @@
 <h1>Meet out Team!</h1>
+
+<% @barbers.each do |barber| %>
+    <%= barber.name %>
+    <br>
+    <%= barber.image_url %>
+    <br>
+<% end %>
