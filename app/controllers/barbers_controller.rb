@@ -7,12 +7,15 @@ class BarbersController < ApplicationController
     def create 
         #binding.pry
         @barber = Barber.new(barber_params)
-        if @barber.save 
-            session[:barber_id] = @barber.id 
+        if @barber.save
             redirect_to barber_path(@barber)
         else
             render :new 
         end
+    end
+
+    def index 
+        @barbers = Barber.all 
     end
 
     def show
@@ -22,7 +25,7 @@ class BarbersController < ApplicationController
     private 
 
     def barber_params 
-        params.require(:barber).permit(:name, :email, :image_url, :password)
+        params.require(:barber).permit(:name, :email, :image_url)
     end
 
 end
