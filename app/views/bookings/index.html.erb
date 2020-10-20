@@ -1,1 +1,6 @@
 <h1>All Bookings</h1>
+
+<% @bookings.each do |booking| %>
+    <p>You have a booking with: <%= booking.barber.name %></p><br>
+    <p>On: <%= booking.date %></p>
+<% end %>
