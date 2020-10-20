@@ -5,7 +5,6 @@ class BarbersController < ApplicationController
     end
 
     def create 
-        #binding.pry
         @barber = Barber.new(barber_params)
         if @barber.save
             redirect_to barber_path(@barber)
