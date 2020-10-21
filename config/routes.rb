@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root 'static#home'
   resources :comments
   resources :barbers
-  resources :bookings
+  resources :bookings do 
+    resources :comments, only: [:new, :index]
+  end
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/login' => 'sessions#new'
