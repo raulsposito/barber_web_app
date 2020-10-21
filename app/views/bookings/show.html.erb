@@ -1,0 +1,8 @@
+<h1>Your Booking</h1>
+
+<p><%= @booking.user.name %></p>
+<p><%= @booking.barber.name %></p>
+<p><%= @booking.barber.image_url %></p>
+<p><%= @booking.date.strftime("On %m/%d/%Y") %></p>
+<p><%= @booking.date.strftime("at %I:%M%p") %></p>
+<p><%= @booking.created_at.strftime("Reservation confirmed on %m/%d/%Y") %></p>
