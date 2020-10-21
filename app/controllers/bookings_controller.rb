@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     end
 
     def show
-        @booking = booking.find_by_id(params[:id])
+        @booking = Booking.find_by_id(params[:booking_id])
     end
 
     def create 
