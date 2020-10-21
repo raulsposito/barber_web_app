@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 
     def new 
-        @booking = Booking.find_by_id(params[:id])
-        @comment = @booking.build_comment
+        @booking = Booking.find_by_id(params[:booking_id])
+        @comment = @booking.comment.build
     end
 
     def create 
