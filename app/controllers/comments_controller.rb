@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
     def new 
         @booking = Booking.find_by_id(params[:booking_id])
-        @comment = @booking.comment.build
+        @comment = @booking.comments.build
     end
 
     def create 
@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
 
     private 
 
-    def user_params 
+    def comment_params
         params.require(:comment).permit(:body, :user_id, :booking_id)
     end
 
