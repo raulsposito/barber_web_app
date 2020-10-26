@@ -7,8 +7,9 @@ class CommentsController < ApplicationController
 
     def create 
         @comment = Comment.new(comment_params)
-        if @comment.save   
-            redirect_to comment_path(@comment)
+        @comment.user_id = current_user.id
+        if @comment.save
+            redirect_to booking_comments_path(@comment)
         else
             render :new 
         end
@@ -17,6 +18,14 @@ class CommentsController < ApplicationController
     def show
         authentication_required
         @comment = Comment.find_by_id(params[:id])
+    end
+
+    def index
+        if params[:booking_id]
+            @comments = Booking.find(params[:booking_id]).comments 
+        else
+            @comments = Comment.all
+        end
     end
 
     private 
