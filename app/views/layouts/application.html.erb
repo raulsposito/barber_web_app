@@ -12,6 +12,7 @@
   <div>
     <%= link_to "Login", login_path %> | 
     <%= link_to "Signup", signup_path %> |
+    <%= link_to "Sign in with Google", "/auth/google_oauth2" %> |
     <% if logged_in? %>
       <%= link_to "Make a Booking", new_booking_path %> |
       <%= link_to "View All Bookings", bookings_path %> |
