@@ -6,7 +6,9 @@
 <p><%= @booking.date.strftime("On %m/%d/%Y") %></p>
 <p><%= @booking.date.strftime("at %I:%M%p") %></p>
 <p><%= @booking.created_at.strftime("Reservation confirmed on %m/%d/%Y") %></p>
-<% binding.pry %>
-<p><%= @booking.comments %></p>
+
+<p><% @booking.comments.each do |c| %></p>
+    <p><%= c.body %></p>
+<% end %>
 
 <p><%= link_to "Make a Comment", new_booking_comment_path(@booking) %></p>
