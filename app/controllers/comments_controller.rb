@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
         @comment.user_id = current_user.id
         if @comment.save
-            redirect_to booking_comments_path(@comment.booking_id)
+            redirect_to booking_path(@comment.booking_id)
         else
             render :new 
         end
