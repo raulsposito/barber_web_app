@@ -1,14 +1,14 @@
 <h1>Make a New Booking!</h1>
 
 <%= form_for(@booking) do |f| %>
-    <%= f.label :date %>
-    <%= f.date_field :date %>
+    <p><%= f.label :date %></p>
+    <p><%= f.date_field :date %></p>
 
-    <%= f.label :barber %>
-    <%= f.collection_select :barber_id, Barber.all, :id, :name %>
+    <p><%= f.label :barber %></p>
+    <p><%= f.collection_select :barber_id, Barber.all, :id, :name %></p>
 
-    <%= f.hidden_field :user_id, value: session[:user_id] %>
+    <p><%= f.hidden_field :user_id, value: session[:user_id] %></p>
 
-    <%= f.submit %> 
+    <p><%= f.submit %> </p>
 
 <% end %>
