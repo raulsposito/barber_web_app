@@ -10,8 +10,11 @@
 <div class="comment">
     <% @booking.comments.each do |c| %>
         <%= c.body %>
+        <br>
         <%= c.user.name %>
+        <br>
         <%= c.created_at.strftime("at %I:%M%p") %>
+        <br>
     <% end %>
 </div>
 
