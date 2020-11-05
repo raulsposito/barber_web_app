@@ -1,19 +1,21 @@
+<%= render partial: "layouts/errors", locals: { object: @barber } %>
+
 <div class="center">
 
     <%= form_for @barber do |f| %>
-        <%= f.label :name %>
+        <p><%= f.label :name %></p>
         <%= f.text_field :name %>
 
-        <%= f.label :email %>        
+        <p><%= f.label :email %>        </p>
         <%= f.email_field :email %>
 
-        <%= f.label :image_url %>
+        <p><%= f.label :image_url %></p>
         <%= f.text_field :image_url %>
 
-        <%= f.label :password %>
+        <p><%= f.label :password %></p>
         <%= f.password_field :password %>
 
-        <%= f.submit %>
+        <p><%= f.submit %></p>
 
     <% end %>
 </div>
