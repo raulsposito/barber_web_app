@@ -2,19 +2,19 @@
 <%= render partial: "layouts/errors", locals: { object: @user } %>
 
 <div class="center">
-<%= form_for @user do |f| %>
-    <p><%= f.label :name %></p>
-    <%= f.text_field :name %>
-    <p><%= f.label :email %></p>
-    <%= f.email_field :email %>
+    <%= form_for @user do |f| %>
+        <p><%= f.label :name %></p>
+        <%= f.text_field :name %>
+        <p><%= f.label :email %></p>
+        <%= f.email_field :email %>
 
-    <p><%= f.label :phone %></p>
-    <%= f.telephone_field :phone %>
+        <p><%= f.label :phone %></p>
+        <%= f.telephone_field :phone %>
 
-    <p><%= f.label :password %></p>
-    <%= f.password_field :password %>
+        <p><%= f.label :password %></p>
+        <%= f.password_field :password %>
 
-    <p><%= f.submit %></p>
+        <p><%= f.submit %></p>
 
-<% end %>
+    <% end %>
 </div>
