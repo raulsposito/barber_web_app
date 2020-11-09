@@ -9,6 +9,10 @@ class BookingsController < ApplicationController
         @bookings = Booking.where("user_id" => current_user.id )
     end
 
+    def next_week
+        @bookings = Booking.all.next_week
+    end
+
     def show
         @booking = Booking.find_by_id(params[:id])
     end
