@@ -1,10 +1,14 @@
 
 <%= render partial: "layouts/errors", locals: { object: @user } %>
 
+<div class="bg-signup">
+    <img src="public/freedombarbersf_banner1.jpg">
+</div>
 <div class="center">
     <%= form_for @user do |f| %>
         <p><%= f.label :name %></p>
         <%= f.text_field :name %>
+
         <p><%= f.label :email %></p>
         <%= f.email_field :email %>
 
@@ -15,6 +19,5 @@
         <%= f.password_field :password %>
 
         <p><%= f.submit %></p>
-
     <% end %>
 </div>
