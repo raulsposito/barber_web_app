@@ -14,7 +14,7 @@ class BarbersController < ApplicationController
     end
 
     def index 
-        @barbers = Barber.all 
+        @barbers = Barber.all
     end
 
     def show
