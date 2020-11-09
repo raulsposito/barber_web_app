@@ -1,1 +1,6 @@
-<h1>Logged in successfully!</h1>
+<h1>Upcoming Reservations!</h1>
+
+<% @users.each do |user| %>
+    <p><%= user.name %></p>
+    <p><%= user.booking.date.strftime("On %m/%d/%Y") %></p>
+<% end %>
