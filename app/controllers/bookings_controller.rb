@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     end
 
     def next_week
-        @bookings = Booking.all.next_week
+        @bookings = Booking.all.next_week.where("user_id" => current_user.id )
     end
 
     def show
