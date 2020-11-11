@@ -41,7 +41,7 @@ p {
 }
 
 body {
-  background-image: url("https://cdna.artstation.com/p/assets/images/images/006/057/904/large/robin-karlin-image-01.jpg?1495722634");
+  background-image: url("https://www.thebeardlyman.com/wp-content/uploads/2017/04/barber.001.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 35em;
@@ -152,10 +152,10 @@ body {
   background: #fff;
   border-radius: 30px;
   box-shadow: 0 0 12px 0 rgba(0,0,0,.1), 0 10px 30px 0 rgba(0,0,0,.2);
-  height: 31.625em;
-  left: 40em;
+  height: 40.625em;
+  left: 65em;
   margin: 12.8125em 0 0;
-  margin-top: -25em;
+  margin-top: -28em;
   position: fixed;
   top: 50%;
   transition: transform .5s cubic-bezier(.77,0,.175,1);
