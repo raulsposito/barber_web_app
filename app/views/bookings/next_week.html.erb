@@ -1,9 +1,10 @@
-<h1>These are the bookings for the upcoming week!</h1>
+<div class="scrollview">
+    <h1>These are the bookings for the upcoming week!</h1>
 
-<% @bookings.each do |b| %>
-    <p><%= b.user.name %> you have a booking for: <%= b.date.strftime("On %m/%d/%Y") %></p>
-    <p>with <%= b.barber.name %></p>
-    <p><%= link_to "Your Booking", booking_path(b) %></p>
-<% end %>
+    <% @bookings.each do |b| %>
+        <p><%= b.user.name %> you have a booking for: <%= b.date.strftime("On %m/%d/%Y") %></p>
+        <p>with <%= b.barber.name %></p>
+        <p><%= link_to "Your Booking", booking_path(b) %></p>
+    <% end %>
 
-
+</div>
