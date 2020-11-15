@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static#home'
   get '/bookings/next_week'
+
   resources :comments
   resources :barbers
   resources :bookings do 
