@@ -2,7 +2,7 @@
 <div class="center">
     <%= form_for(@booking) do |f| %>
         <p><%= f.label :date %></p>
-        <p><%= f.date_field :date %></p>
+        <p><%= f.datetime_field :date %></p>
     
         <p><%= f.label :barber %></p>
         <p><%= f.collection_select :barber_id, Barber.all, :id, :name %></p>
