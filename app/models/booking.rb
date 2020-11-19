@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
 
     accepts_nested_attributes_for :comments
     validates :date, presence: true
-    #validates :date, uniqueness: { scope: :datetime, message: "That day is taken, choose another one."}
+    #validates :date, uniqueness: { scope: :date, message: "That day is taken."}
     scope :next_week, -> { where('date < ?', Time.now+7.days) }
+
 end
