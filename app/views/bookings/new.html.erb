@@ -1,5 +1,7 @@
 
 <div class="center">
+
+
     <%= form_for(@booking) do |f| %>
         <p><%= f.label :date %></p>
         <p><%= f.datetime_field :date %></p>
@@ -11,5 +13,17 @@
     
         <p><%= f.submit %> </p>
     
+    <% end %>
+
+    
+    <% if @booking.errors.any? %>
+        <div id="error_explanation">
+        <p><%= pluralize(@booking.errors.count, "error") %> prohibited this from being saved:</p>
+        <ul>
+        <% @booking.errors.full_messages.each do |msg| %>
+            <li style="color: #000000" ><%= msg %></li>
+        <% end %>
+        </ul>
+        </div>
     <% end %>
 </div>
