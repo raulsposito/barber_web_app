@@ -8,4 +8,17 @@ class Booking < ApplicationRecord
     #validates :date, uniqueness: { scope: :date, message: "That day is taken."}
     scope :next_week, -> { where('date < ?', Time.now+7.days) }
 
+
+    def cancel_booking
+        booking.status = false
+    end
+
+    def self.active?
+        if 
+            self.status = true 
+        else
+            false
+        end
+    end
+
 end

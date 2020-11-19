@@ -19,6 +19,8 @@ class BookingsController < ApplicationController
 
     def create 
         @booking = current_user.bookings.build(bookings_params)
+        @booking.status = true
+        @booking.duration = 1.hour
         if @booking.save 
             redirect_to bookings_path
         else 
@@ -29,6 +31,6 @@ class BookingsController < ApplicationController
     private 
 
     def bookings_params
-        params.require(:booking).permit(:date, :user_id, :barber_id)
+        params.require(:booking).permit(:date, :user_id, :barber_id, :status, :duration)
     end
 end
