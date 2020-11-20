@@ -2,6 +2,7 @@ class Booking < ApplicationRecord
     belongs_to :user 
     belongs_to :barber
     has_many :comments
+    has_many :slots
 
     accepts_nested_attributes_for :comments
     validates :date, presence: true
