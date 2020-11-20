@@ -12,5 +12,6 @@ class Booking < ApplicationRecord
     end
     #validates :date, uniqueness: { scope: :date, message: "That day is taken."}
     scope :next_week, -> { where('date < ?', Time.now+7.days) }
+    scope :active, -> { where state: 'active' }
 
 end
