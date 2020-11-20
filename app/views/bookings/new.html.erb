@@ -15,15 +15,6 @@
     
     <% end %>
 
-    
-    <% if @booking.errors.any? %>
-        <div id="error_explanation">
-        <p><%= pluralize(@booking.errors.count, "error") %> prohibited this from being saved:</p>
-        <ul>
-        <% @booking.errors.full_messages.each do |msg| %>
-            <li style="color: #000000" ><%= msg %></li>
-        <% end %>
-        </ul>
-        </div>
-    <% end %>
+    <%= render partial: "layout/errors", locals: (object: @booking) %>
+
 </div>
