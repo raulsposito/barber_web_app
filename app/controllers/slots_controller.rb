@@ -1,9 +1,7 @@
 class SlotsController < ApplicationController
 
     def new 
-        binding.pry
-        @barber = Barber.find_by(params[:barber_id])
-        @slot = Barber.slot.build(slots_params)
+        @slot = Slot.new
     end
 
     def index
@@ -11,7 +9,9 @@ class SlotsController < ApplicationController
     end
 
     def create 
-        binding.pry
+        #binding.pry
+        @barber = Barber.find_by(params[:barber_id])
+        @slot = Barber.slot.build
     end
 
     private 
