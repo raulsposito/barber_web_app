@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get '/bookings/next_week'
 
   resources :comments
-  resources :barbers
+  resources :barbers do 
+    resources :slots, only: [:new, :create, :index]
+  end
+  
   resources :bookings do 
     resources :comments, only: [:new, :create, :index]
   end
