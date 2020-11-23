@@ -1,0 +1,21 @@
+<h2>Create New Available Slots for <%= @barber.name %></h2>
+
+<div class="center">
+    
+    <%= form_with model: @barber do |f| %>
+        <ul>
+        <%= f.fields_for :slots do |slots| %>   
+            <li>
+            <%= slots.label :start_time %>
+            <%= slots.datetime_field :start_time %>
+            
+            <%= slots.label :duration %>
+            <%= slots.number_field :duration %> 
+
+            <%= slots.submit %>
+
+            </li>
+        <% end %> 
+        </ul>
+    <% end %>
+</div>
