@@ -1,11 +1,17 @@
 class SlotsController < ApplicationController
 
     def new 
-        @slot = Slot.new
+        binding.pry
+        @barber = Barber.find_by(params[:barber_id])
+        @slot = Barber.slot.build(slots_params)
     end
 
     def index
         @slots = Slots.where("available" => true )
+    end
+
+    def create 
+        binding.pry
     end
 
     private 
