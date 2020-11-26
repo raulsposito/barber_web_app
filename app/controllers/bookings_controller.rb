@@ -6,11 +6,11 @@ class BookingsController < ApplicationController
     end
 
     def index
-        @bookings = Booking.where("user_id" => current_user.id )
+        @bookings = current_user.bookings
     end
 
     def next_week
-        @bookings = Booking.all.next_week.where("user_id" => current_user.id )
+        @bookings = current_user.bookings.next_week
     end
 
     def show

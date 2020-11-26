@@ -1,15 +1,15 @@
-<h2>Create New Available Slots for <%= @barber.name %></h2>
+<h2>Create New Available Slots</h2>
 
-<div class="center">
+<%= render partial: "layouts/errors", locals: { object: @slot } %>
     
     <%= form_with model: @barber do |f| %>
         <ul>
         <%= f.fields_for :slots do |slots| %>   
             <li>
-            <%= slots.label :start_time %>
+            <p><%= slots.label :start_time %></p>
             <%= slots.datetime_field :start_time %>
             
-            <%= slots.label :duration %>
+            <p><%= slots.label :duration %></p>
             <%= slots.number_field :duration %> 
 
             <%= slots.submit %>
@@ -18,4 +18,3 @@
         <% end %> 
         </ul>
     <% end %>
-</div>

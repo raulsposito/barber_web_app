@@ -5,4 +5,6 @@ class Barber < ApplicationRecord
     accepts_nested_attributes_for :slots
     has_many :users ,through: :bookings
     has_many :comments ,through: :bookings
+
+    scope :search, -> (query) { where('name like ?', "%#{query}%") }
 end

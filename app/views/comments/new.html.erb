@@ -1,6 +1,6 @@
 <h1>Add a Comment below: </h1>
 
-<%= render partial: "layout/errors", locals: (object: @comment) %>
+
 
 <%= form_for(@comment) do |f| %>
     <%= f.hidden_field(:booking_id, :value => params[:booking_id]) %>

@@ -1,6 +1,13 @@
 <div class="scrollview">
     <h1>Meet out Team!</h1>
 
+    
+    <%= form_with(url: "/barbers", method: "get") do %>
+        <%= label_tag(:search, "Search for:") %>
+        <%= text_field_tag(:search) %>
+        <%= submit_tag("Search") %>
+    <% end %>
+
     <% @barbers.each do |barber| %>
         <p><%= barber.name %></p>
         <br>

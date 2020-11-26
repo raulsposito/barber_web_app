@@ -13,8 +13,13 @@ class BarbersController < ApplicationController
         end
     end
 
-    def index 
-        @barbers = Barber.all
+    def index
+        if params[:search]
+            binding.pry
+            @barbers = Barber.search(params[:search])
+        else
+            @barbers = Barber.all
+        end
     end
 
     def show
