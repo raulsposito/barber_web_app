@@ -9,7 +9,7 @@ Ann app created for barbers to manage their bookings and availability.
 Clone the repo
 
 ```ruby
-gem 'thoth-tarot'
+git clone https://github.com/raulsposito/barber_web_app.git
 ```
 
 And then execute:
