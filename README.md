@@ -29,14 +29,6 @@ cd into barber_web_app
    
 And navigate to http://localhost:3000/
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/'raulsposito'/barber_web_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/'raulsposito'/barber_web_app/blob/master/CODE_OF_CONDUCT.md).
-
-
-## Code of Conduct
-
-Everyone interacting in the Thoth::Tarot project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'raulsposito'/barber_web_app/blob/master/CODE_OF_CONDUCT.md).
 
 ## MIT License 
 
