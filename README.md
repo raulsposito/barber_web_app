@@ -2,6 +2,8 @@
 
 Welcome to BarberWebApp! 
 
+![](BarberWebAppView.png)
+
 Ann app created for barbers to manage their bookings and availability.
 
 ## Installation
@@ -19,7 +21,13 @@ And then execute:
 
 ## Usage
 
+```ruby
+cd into barber_web_app
+```
 
+    $ Rails s
+   
+And navigate to http://localhost:3000/
 
 ## Contributing
 
